@@ -6,11 +6,13 @@ import { MovieContext } from '../context/MovieContext';
 import noImage from '../utils/no-image-available.png';
 import '../styles/Detail.css';
 
-const Detail = () => {
+const Detail = (props) => {
+  // const {id} = useParams()
+  // console.log(id);
   // React Router'daki dinamik URL kısmını almalıyız (useParams)
   const { showDetail, selectedMovie } = useContext(MovieContext);
   useEffect(() => {
-    showDetail('tt1201607'); // useParams ile alınan film id'sini kullanınız. 
+    showDetail("tt1201607"); // useParams ile alınan film id'sini kullanınız. 
   }, []);
 
   return (

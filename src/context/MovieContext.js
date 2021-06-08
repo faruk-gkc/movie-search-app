@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 export const MovieContext = createContext();
 
-const API_KEY = ''; // OMDb API Key
+const API_KEY = '5d0e325e'; // OMDb API Key
 
 const MovieApp = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
@@ -42,6 +42,7 @@ const MovieApp = ({ children }) => {
   };
 
   const showDetail = async (id) => {
+    // console.log(movieID)
     const response = await axios(
       `https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}`
     );
